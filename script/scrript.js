@@ -24,8 +24,9 @@ class Audioplayer{
         if(localStorage.getItem("hi") == null){
             alert(this.Message);    
         }
-        localStorage.setItem("hi",this.Message)
+        localStorage.setItem("hi",this.Message);
         this.audio = document.getElementById("audio");
+        this.audio.crossOrigin = "anonymouse";
         this.play_pause_button = document.getElementById("play_pause_button");
         this.pleaseWait = document.getElementById("pleaseWait");
         this.Hide_pleaseWait();
